@@ -1,0 +1,83 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+    "text": "Load Factors of Different Lines. (As of 11th October 2024)",
+    "font": "Elgraine",
+    "fontSize": 28,
+    "anchor": "middle"
+  },
+    "description": "Five donut charts horizontally concatenated to show load factors of different lines. (As of 11th October 2024)",
+    "concat": [
+      {
+        "title": "Ampang Line",
+        "data": {
+          "values": [
+            {"category": "Load Percentage", "value": 56},
+            {"category": "Unloaded Percentage", "value": 44}
+          ]
+        },
+        "mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
+        "encoding": {
+          "theta": {"field": "value", "type": "quantitative"},
+          "color": {"field": "category", "type": "nominal"}
+        }
+      },
+      {
+        "title": "Kelana Jaya Line",
+        "data": {
+          "values": [
+            {"category": "Load Percentage", "value": 98},
+            {"category": "Unloaded Percentage", "value": 2}
+          ]
+        },
+        "mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
+        "encoding": {
+          "theta": {"field": "value", "type": "quantitative"},
+          "color": {"field": "category", "type": "nominal"}
+        }
+      },
+      {
+        "title": "Monorail Line",
+        "data": {
+          "values": [
+            {"category": "Load Percentage", "value": 68},
+            {"category": "Unloaded Percentage", "value": 32}
+          ]
+        },
+        "mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
+        "encoding": {
+          "theta": {"field": "value", "type": "quantitative"},
+          "color": {"field": "category", "type": "nominal"}
+        }
+      },
+      {
+        "title": "Kajang Line",
+        "data": {
+          "values": [
+            {"category": "Load Percentage", "value": 77},
+            {"category": "Unloaded Percentage", "value": 23}
+          ]
+        },
+        "mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
+        "encoding": {
+          "theta": {"field": "value", "type": "quantitative"},
+          "color": {"field": "category", "type": "nominal"}
+        }
+      },
+      {
+        "title": "Putrajaya Line",
+        "data": {
+          "values": [
+            {"category": "Load Percentage", "value": 61},
+            {"category": "Unloaded Percentage", "value": 39}
+          ]
+        },
+        "mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
+        "encoding": {
+          "theta": {"field": "value", "type": "quantitative"},
+          "color": {"field": "category", "type": "nominal"}
+        }
+      }
+    ]
+  }
+  
