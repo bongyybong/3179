@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Rail Ridership in Malaysia (2017 to 2023)",
+    "font": "Elgraine",
+    "fontSize": 28,
+    "anchor": "middle"
+  },
+  "width": 500,
+  "data": { "url": "railRidership2017to2023.csv" },
+  "mark": { "type": "line", "strokeWidth": 2, "color": "black", "point": true },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "temporal",
+      "axis": { "title": "Year" }
+    },
+    "y": {
+      "field": "ridership",
+      "type": "quantitative",
+      "axis": { "title": "Ridership" }
+    },
+    "tooltip": [
+      { "field": "year", "type": "temporal" },
+      { "field": "ridership", "type": "quantitative" }
+    ]
+  }
+}

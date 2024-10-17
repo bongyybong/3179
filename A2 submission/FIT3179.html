@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <script src="vega_lite_vis.js"></script>
+
+    <title>How Does Malaysia's Rail Network Fare?</title>
+
+    <style>
+        body {
+            font-family: Elgraine;
+            text-align: justify;
+            width: 1000px;
+            margin: 0 auto;
+            max-width: 100%;
+            background-image: url('https://img.freepik.com/free-vector/yellow-parchment_53876-91513.jpg?t=st=1729162147~exp=1729165747~hmac=cceb619a3efa8b868ed43800e64a26e00a232a1ed18003fe8ea4c2b9b20a3670&w=1480');
+        }
+
+        h1 {
+            text-align: center;
+            display: inline-block;
+            margin: 0;
+            margin-left: 25%;
+            font-size: 50px;
+            background-color: #2f8d46;
+            background-image: url('https://media.istockphoto.com/id/1160478813/photo/male-runner-stretching-leg-and-feet-and-preparing-for-running-outdoors-smart-watch-or-fitness.jpg?s=2048x2048&w=is&k=20&c=RY0Rg2NDjNijdsBl6SKmzESYBnipgkFlSfV9wPmO-Hs=');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            padding-top: 3%;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .content .map {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .content .chart {
+            flex: 1;
+            margin-top: 20px;
+            padding-bottom: 2%;
+        }
+
+        .content .donut {
+            flex: 1;
+            padding: 10px;
+            margin-top: 20px;
+            max-width: 80%;
+        }
+
+        .content .text {
+            flex: 1;
+            padding-top: 100px;
+            font-size: 18px;
+            text-align: left;
+            text-align: justify;
+            margin-bottom: 30px;
+        }
+
+        .content .donut_explanation {
+            flex: 1;
+            margin-left: 20px;
+            font-size: 18px;
+            text-align: left;
+            text-align: justify;
+            padding: 10px;
+        }
+
+        .content .chart_explanation {
+            flex: 1;
+            margin-left: 20px;
+            font-size: 18px;
+            text-align: left;
+            text-align: justify;
+            padding: 10px;
+        }
+
+        .description-box {
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 22px;
+            text-align: justify;
+            text-align: center;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Malaysia's Rail Network</h1>
+    <div class="description-box">
+        We will mainly focus on West Malaysia due to their extensive rail network such as LRT, MRT, and KTM.
+    </div>
+
+    <div class="map" id="chloropleth_map">
+
+
+    </div>
+
+    <div class="text">
+        <p>
+
+            The railway network in Malaysia has significantly expanded over the years,
+            with major developments in urban areas like Kuala Lumpur. This expansion includes the construction of
+            various
+            LRT and MRT lines, providing more accessibility to public transportation.
+        </p>
+        <p>
+            The data presented in the map highlights the population density in different districts, emphasizing the
+            importance of
+            rail access in densely populated regions.
+        </p>
+        <p>
+            Malaysia is a car-centic country, with very little walkability within a few KM radius of train stations.
+            Busses are also
+            infrequent, leaving the population with no choice but to drive.
+        </p>
+    </div>
+
+    <div class="content">
+        <div class="chart" id="line_chart"></div>
+
+        <div class="chart_explanation">
+            <p>
+                Rail ridership in Malaysia has been increasing back to pre-covid levels. The latest MRT3 is said to
+                complete the Klang Valley train loop, as it is a circle loop. This may increase the effectiveness of the
+                system.
+            </p>
+
+            <p>
+                Pre-Covid, in 2019, it has achieved 283,290,816 riders.
+                In 2021, it is the lowest with only 78,288,635 riders.
+                In 2023, it has achieved 272,051,582 riders.
+            </p>
+
+            <p>
+                This shows that there is a strong demand for public transport.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="donut" id="donut_chart"></div>
+    <div class="donut_explanation">
+        <p>
+            Demand for the Kelana Jaya Line is high as it is operating at almost 100 percent capacity. Otherwise, other
+            line seems to have decent ridership. By completing the MRT3 project, demand can be spread out into other
+            places,
+            reducing congestion.
+
+            As such, Malaysia has decent railway connection in urban areas.
+        </p>
+    </div>
+
+</body>
+
+</html>
